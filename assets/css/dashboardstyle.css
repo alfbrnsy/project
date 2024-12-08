@@ -1,0 +1,63 @@
+/* Gaya Warna */
+:root {
+    --primary-blue: #0071D3;
+    --accent-yellow: #FFD700;
+    --text-color: #000;
+}
+
+/* Sidebar */
+aside {
+    background-color: var(--primary-blue);
+    color: #fff;
+}
+
+aside h2 {
+    color: var(--accent-yellow);
+}
+
+aside a {
+    color: #fff;
+}
+
+aside a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Header */
+header h1 {
+    color: var(--primary-blue);
+}
+
+header div div {
+    background-color: var(--accent-yellow);
+}
+
+/* Informasi Mahasiswa */
+section h2 {
+    color: var(--primary-blue);
+}
+
+section div div {
+    border: 1px solid var(--primary-blue);
+    background-color: var(--accent-yellow);
+    color: var(--text-color);
+}
+
+/* Statistik */
+.stats div {
+    border: 2px solid var(--primary-blue);
+    background-color: var(--accent-yellow);
+}
+
+.stats div h4 {
+    color: var(--primary-blue);
+}
+
+.stats div p {
+    color: var(--primary-blue);
+}
+
+.stats .alpha,
+.stats .kompensasi {
+    border-color: var(--primary-blue);
+}

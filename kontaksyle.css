@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 15%;
+    background-color: #004085;
+    color: #fff;
+    padding: 20px;
+    display: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Pastikan sidebar memanjang sepanjang layar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+
+.logo {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #FFD700;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto; /* Menempatkan footer di bawah */
+    padding-top: 300px; /* Menambahkan sedikit jarak dari menu */
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 16%; /* Memberikan jarak di sebelah kiri konten */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+/* Kontak Section */
+.contact-info {
+    margin-top: 30px;
+}
+
+h2 {
+    color: #004085;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-list a {
+    color: #004085;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form h2 {
+    color: #004085;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #004085;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #FFD700;
+}

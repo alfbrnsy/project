@@ -1,0 +1,137 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 15%;
+    background-color: #004085;
+    color: #fff;
+    padding: 20px;
+    display: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Pastikan sidebar memanjang sepanjang layar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #FFD700;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto; /* Menempatkan footer di bawah */
+    padding-top: 300px; /* Menambahkan sedikit jarak dari menu */
+}
+
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 16%; /* Memberikan jarak di sebelah kiri konten */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.form-kompensasi {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #004085;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="date"],
+select,
+textarea,
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #004085;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    align-self: center;
+}
+
+.btn-submit:hover {
+    background-color: #FFD700;
+}

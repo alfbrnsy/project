@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 15%;
+    background-color: #004085;
+    color: #fff;
+    padding: 20px;
+    display: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Pastikan sidebar memanjang sepanjang layar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #FFD700;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto; /* Menempatkan footer di bawah */
+    padding-top: 300px; /* Menambahkan sedikit jarak dari menu */
+}
+
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 16%; /* Memberikan jarak di sebelah kiri konten */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.student-info {
+    margin-top: 20px;
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+}
+
+.intro {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.intro img {
+    width: 250px;
+}
+
+.statistics {
+    margin-top: 20px;
+}
+
+.statistics h3 {
+    color: #004085;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.stat h4 {
+    color: #004085;
+}
+
+.stat p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* Warna berbeda untuk setiap kategori */
+.izin {
+    background-color: #9DB7FF; /* Kuning untuk Izin */
+}
+
+.sakit {
+    background-color: #E39DFF; /* Merah untuk Sakit */
+}
+
+.alpha {
+    background-color: #FFD19D; /* Biru untuk Alpha */
+}
+
+.kompensasi {
+    background-color: #FBC5C1; /* Hijau untuk Kompensasi */
+}
+
+
