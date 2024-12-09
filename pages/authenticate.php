@@ -3,31 +3,26 @@
 session_start();
 
 // Include the database connection file
-include_once '../config/database.php'; // Ensure this path is correct
+include_once '../config/database.php'; // Update the path if necessary
 
 // Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-
-    // Debugging: Log input data
-    error_log("Username: $username, Password: $password");
+    $role = trim($_POST['role']);
 
     // Validate input
-    if (empty($username) || empty($password)) {
-        header('Location: /pages/login.php?error=Empty username or password');
+    if (empty($username) || empty($password) || empty($role)) {
+        header('Location: /pages/login.php?error=Empty fields');
         exit();
     }
 
-    // Query to verify the user
-    $sql = "SELECT * FROM Users WHERE username = ?";
-    $params = array($username); // Parameters for the query
+    // Query to verify the user and their role
+    $sql = "SELECT * FROM Users WHERE username = ? AND role = ?";
+    $params = array($username, $role);
 
-    // Debugging: Log SQL query
-    error_log("SQL Query: $sql with params: " . print_r($params, true));
-
-    // Prepare the statement
+    // Prepare the SQL statement
     $stmt = sqlsrv_prepare($conn, $sql, $params);
 
     if ($stmt) {
@@ -36,44 +31,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Fetch the result
             $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 
-            // Debugging: Log fetched user data
-            error_log("Fetched User: " . print_r($user, true));
-
-            // Check if the user exists and verify password
-            if ($user && $password === $user['password']) { // Use password_verify() if passwords are hashed
+            // Check if user exists and password matches
+            if ($user && password_verify($password, $user['password'])) {
                 // Valid credentials, set session variables
                 $_SESSION['user_id'] = $user['id_user'];
-                $_SESSION['username'] = $user['username']; // Store username in session
-                $_SESSION['role'] = $user['role']; // Store role in session
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['role'] = $user['role'];
 
-                // Debugging: Log successful login
-                error_log("Login successful for user: " . $user['username']);
-
-                // Redirect based on user role
-                if ($user['role'] === 'dosen') {
-                    header('Location: /project/pages/dosen/dashboard.php');
-                } else if ($user['role'] === 'mahasiswa') {
+                // Redirect based on role
+                if ($user['role'] === 'mahasiswa') {
                     header('Location: /project/pages/mahasiswa/dashboard.php');
+                } elseif ($user['role'] === 'dosen') {
+                    header('Location: /project/pages/dosen/dashboard.php');
                 }
                 exit();
             } else {
-                // Debugging: Log mismatch reason
-                if (!$user) {
-                    error_log("User not found in the database.");
-                } else {
-                    error_log("Password mismatch for user: " . $username);
-                }
+                // Invalid credentials
                 header('Location: /pages/login.php?error=Invalid credentials');
                 exit();
             }
         } else {
-            // Debugging: Log execution errors
+            // Log execution errors
             error_log("Execution error: " . print_r(sqlsrv_errors(), true));
             header('Location: /pages/login.php?error=Database error');
             exit();
         }
     } else {
-        // Debugging: Log preparation errors
+        // Log preparation errors
         error_log("Preparation error: " . print_r(sqlsrv_errors(), true));
         header('Location: /pages/login.php?error=Database preparation error');
         exit();
