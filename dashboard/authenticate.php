@@ -40,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Redirect based on role
                 if ($user['role'] === 'mahasiswa') {
-                    header('Location: /project/pages/mahasiswa/dashboard.php');
+                    header('Location: /mahasiswa/dashboard.php');
                 } elseif ($user['role'] === 'dosen') {
-                    header('Location: /project/pages/dosen/dashboard.php');
+                    header('Location: /dosen/dashboard.php');
                 }
                 exit();
             } else {
