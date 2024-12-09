@@ -98,7 +98,7 @@ body {
     display: flex;
     justify-content: left;
     gap: 36px;
-    margin-bottom: 36px;
+    margin-bottom: 16px;
   }
   
   .user-details .detail {
@@ -132,11 +132,12 @@ body {
   }
   
   .welcome-box p {
-    margin-left: 60px;
+    margin: 20px;
     font-size: 1rem;
     color: #555;
     line-height: 1.5;
-    text-align: right;
+    text-align: left;
+    
   }  
   
   .stats {
@@ -185,3 +186,71 @@ body {
 .stats .card.kompensasi {
     background-color: #FFD19D; /* Green */
 }
+
+
+/* Profile Area */
+.top-header {
+  display: flex;
+  justify-content: flex-end; /* Posisikan di kanan atas */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4; /* Warna header */
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Buat foto menjadi lingkaran */
+  border: 2px solid #005180; /* Tambahkan border */
+}
+
+.profile-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Logout Menu */
+.logout-menu {
+  display: none; /* Sembunyikan secara default */
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.logout-menu button {
+  background-color: #00264d; /* Warna tombol */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 100%; /* Sesuaikan dengan menu dropdown */
+  text-align: left;
+}
+
+.logout-menu button:hover {
+  background-color: #005180; /* Warna saat hover */
+}
+
+/* Hover Effect */
+.profile-area:hover .logout-menu {
+  display: block; /* Tampilkan menu logout saat hover */
+}
+
