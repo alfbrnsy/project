@@ -32,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header("Location: dosen/dashboarddosen.html");
             } elseif ($user['role'] === 'mahasiswa') {
                 header("Location: mahasiswa/dashboard.html");
-            }
+            } elseif ($user['role'] === 'kps') {
+                header("Location: kps/dashboardkps.html");
             exit();
         } else {
             // Password does not match
@@ -47,5 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     header("Location: ../logintt.html");
     exit();
+}
 }
 ?>
