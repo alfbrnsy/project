@@ -11,53 +11,97 @@ body {
 }
 
 /* Sidebar Styling */
-.sidebar {
-    width: 15%;
-    background-color: #004085;
-    color: #fff;
+body {
+    font-family: "Plus Jakarta Sans";
+    margin: 0;
+    display: flex;
+    background-color: #f4f4f4;
+  }
+  
+  .dashboard {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #00264d;
+    color: white;
     padding: 20px;
-    display: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh; /* Pastikan sidebar memanjang sepanjang layar */
+    height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    transition: transform 0.3s ease; /* Animasi transisi */
-}
-
-
-.logo {
-    width: 130px;
+    justify-content: space-between;
+  
+  }
+  
+  .sidebar .logo {
+    text-align: center;
     margin-bottom: 20px;
-}
-
-.menu {
+  }
+  
+  .sidebar .logo img {
+    margin-top: 24px;
+    width: 70%;
+    height: auto;
+  }
+  
+  .sidebar .menu {
     list-style: none;
     padding: 0;
-}
-
-.menu li {
-    margin: 15px 0;
-}
-
-.menu a {
-    text-decoration: none;
+  }
+  
+  .sidebar .menu li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .sidebar .menu li a{
+      color: white !important; /* Pastikan teks link di sidebar putih */
+      text-decoration: none; /* Hilangkan garis bawah */
+  }
+  
+  .sidebar .menu li:hover {
+    background-color: #005180;
+  }
+  
+  .sidebar .menu li .material-icons {
+    margin-right: 10px;
+  }
+  
+  .menu li.active {
+    background-color: #007bff;
+    /* Change background for the active menu */
     color: #fff;
-    display: block;
-    font-size: 16px;
-}
-
-.menu a:hover {
-    color: #FFD700;
-}
-
-footer {
-    font-size: 12px;
+    /* Change text color for better contrast */
+    border-radius: 5px;
+    /* Optional: rounded corners */
+  }
+  
+  .menu li.active span {
+    color: #fff;
+    /* Ensure the icon color matches */
+  }
+  
+  .sidebar .copyright {
+    margin-top: 190px;
+    /* align-items: flex-end; */
     text-align: center;
-    margin-top: auto; /* Menempatkan footer di bawah */
-    padding-top: 300px; /* Menambahkan sedikit jarak dari menu */
-}
+    padding: 30px;
+  }
+  
+  .sidebar .menu li:hover a {
+    color: #cfcfcf; /* Ubah menjadi abu-abu terang saat hover */
+  }
+  
+  .sidebar .menu li.active a {
+    color: white; /* Pastikan link aktif tetap putih */
+    font-weight: bold; /* Buat lebih tebal untuk penekanan */
+  }
 
 /* Main Content */
 .content {
