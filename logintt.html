@@ -30,17 +30,10 @@
                     <option value="">Select Role</option>
                     <option value="mahasiswa">Mahasiswa</option>
                     <option value="dosen">Dosen</option>
-                    <option value="kps">KPS</option>
-
                 </select>
             </div>
             <button type="submit" class="btn">Login</button>
         </form>
-        
-            <!--  errors handling  -->
-            <?php if (isset($_GET['error'])): ?>
-                <p class="error-message" style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
-            <?php endif; ?>
         </form>
     </div>
 </body>
