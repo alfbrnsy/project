@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelanggaran Tata Tertib</title>
     <link rel="stylesheet" href="../assets/css/ptatatertib.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <img src="logo.png" alt="Logo JTI" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo JTI" class="logo">
             <ul class="menu">
-                <li><a href="#">🏠 Halaman Awal</a></li>
-                <li><a href="#">🚩 Pelanggaran Tata Tertib</a></li>
-                <li><a href="#">📄 Pengajuan Surat Izin</a></li>
-                <li><a href="#">🔄 Pengajuan Kompensasi</a></li>
-                <li><a href="#">🔔 Notifikasi</a></li>
-                <li><a href="#">📜 Histori Pelanggaran</a></li>
-                <li><a href="#">📞 Kontak</a></li>
-                <li><a href="#">📖 Panduan Tata Tertib</a></li>
+                <li class="active"><span class="material-icons">home</span> Halaman Awal</li>
+                <li><span class="material-icons">list</span> Pelanggaran Tata Tertib</li>
+                <li><span class="material-icons">description</span> Pengajuan Surat Izin</li>
+                <li><span class="material-icons">assignment</span> Pengajuan Kompensasi</li>
+                <li><span class="material-icons">notifications</span> Notifikasi</li>
+                <li><span class="material-icons">history</span> Histori Pelanggaran</li>
+                <li><span class="material-icons">contact_support</span> Kontak</li>
+                <li><span class="material-icons">help</span> Panduan Tata Tertib</li>
             </ul>
             <footer>
                 <p>2024 - Jurusan Teknologi Informasi<br>Politeknik Negeri Malang</p>
