@@ -1,7 +1,7 @@
 <?php
 
 // Konfigurasi koneksi database
-$serverName = "DESKTOP-F7SUOCF"; // Nama server
+$serverName = "HUSEIN"; // Nama server
 $connectionInfo = array("Database" => "si_tata_tertib"); // Nama database
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 

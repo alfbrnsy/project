@@ -1,3 +1,25 @@
+<?php
+session_start();
+require_once '../../config/database.php'; // Include your database connection
+
+// Check if the user is logged in
+if (!isset($_SESSION['id_student'])) {
+    header('Location: ../../logintt.html'); // Redirect to login page if not logged in
+    exit;
+}
+
+$id_student = $_SESSION['id_student']; // Get logged-in student's ID
+
+// Fetch tb_report data for the current student
+$sql = "SELECT * FROM tb_report WHERE id_student = ? ORDER BY id_report DESC";
+$params = [$id_student];
+$stmt = sqlsrv_query($conn, $sql, $params);
+
+if ($stmt === false) {
+    die(print_r(sqlsrv_errors(), true)); // Handle query errors
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,32 +63,33 @@
                             <th>No.</th>
                             <th>Jenis Pelanggaran</th>
                             <th>Deskripsi</th>
-                            <th>Tanggal</th>
                             <th>Status</th>
+                            <th>Keterangan</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Keterlambatan</td>
-                            <td>Terlambat hadir pada kuliah pagi</td>
-                            <td>2024-12-01</td>
-                            <td><span class="status-warn">Peringatan</span></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Pelanggaran Kode Etik</td>
-                            <td>Menggunakan HP di ruang kelas</td>
-                            <td>2024-12-02</td>
-                            <td><span class="status-done">Selesai</span></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Tidak Mengumpulkan Tugas</td>
-                            <td>Tugas tidak dikumpulkan tepat waktu</td>
-                            <td>2024-12-05</td>
-                            <td><span class="status-pending">Menunggu Verifikasi</span></td>
-                        </tr>
+                        <?php 
+                        $no = 1; // Row counter
+                        while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)): 
+                        ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= htmlspecialchars($row['violation_details']) ?></td>
+                                <td><?= htmlspecialchars($row['proof'] ?: 'Tidak Ada Bukti') ?></td>
+                                <td><?= htmlspecialchars($row['status'] ?: 'Pending') ?></td>
+                                <td>
+                                    <?php
+                                    if ($row['status'] === 'pending') {
+                                        echo '<span class="status-pending">Menunggu Verifikasi</span>';
+                                    } elseif ($row['status'] === 'verified') {
+                                        echo '<span class="status-done">Selesai</span>';
+                                    } elseif ($row['status'] === 'rejected') {
+                                        echo '<span class="status-warn">Ditolak</span>';
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                        <?php endwhile; ?>
                     </tbody>
                 </table>
             </section>

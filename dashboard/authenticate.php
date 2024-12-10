@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Verify the password (plain text comparison)
         if ($user['password'] === $password) {
-            // Start user session
+            // Store user details in the session
             $_SESSION['id_user'] = $user['id_user'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
@@ -31,9 +31,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($user['role'] === 'dosen') {
                 header("Location: dosen/dashboarddosen.html");
             } elseif ($user['role'] === 'mahasiswa') {
-                header("Location: mahasiswa/dashboard.html");
+                // Fetch id_student
+                $sqlStudent = "SELECT id_student FROM tb_student WHERE id_student = ?";
+                $stmtStudent = sqlsrv_query($conn, $sqlStudent, array($user['id_user']));
+
+                if ($stmtStudent && $studentRow = sqlsrv_fetch_array($stmtStudent, SQLSRV_FETCH_ASSOC)) {
+                    $_SESSION['id_student'] = $studentRow['id_student'];
+                    header("Location: mahasiswa/dashboard.html");
+                } else {
+                    // Handle case where id_student is not found
+                    header("Location: ../logintt.html?error=User%20role%20data%20not%20found");
+                }
             } elseif ($user['role'] === 'kps') {
                 header("Location: kps/dashboardkps.html");
+            }
             exit();
         } else {
             // Password does not match
@@ -46,8 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 } else {
+    // Handle direct access to this file
     header("Location: ../logintt.html");
     exit();
-}
 }
 ?>

@@ -1,3 +1,15 @@
+<?php
+require_once '../config/database.php'; // Include your database connection
+
+// Fetch all rules from the database
+$sql = "SELECT * FROM tb_rules ORDER BY id_rules";
+$stmt = sqlsrv_query($conn, $sql);
+
+if ($stmt === false) {
+    die(print_r(sqlsrv_errors(), true)); // Handle errors
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,29 +49,28 @@
             </header>
 
             <section class="guidelines">
-                <h2>Aturan Umum</h2>
-                <p>Di bawah ini adalah panduan tata tertib yang berlaku di Jurusan Teknologi Informasi Politeknik Negeri Malang:</p>
+                <h2>Daftar Tata Tertib</h2>
+                <p>Berikut adalah daftar tata tertib yang berlaku di Jurusan Teknologi Informasi:</p>
 
-                <ul class="guideline-list">
-                    <li><strong>Disiplin Waktu:</strong> Semua mahasiswa wajib hadir tepat waktu dalam setiap kegiatan perkuliahan.</li>
-                    <li><strong>Berpakaian Rapi:</strong> Mahasiswa diwajibkan untuk berpakaian sopan dan sesuai dengan ketentuan yang berlaku.</li>
-                    <li><strong>Ketentuan Kehadiran:</strong> Kehadiran minimal 75% untuk setiap mata kuliah agar dapat mengikuti ujian akhir.</li>
-                    <li><strong>Perilaku:</strong> Mahasiswa diharapkan bersikap sopan, menghormati dosen dan sesama mahasiswa.</li>
-                    <li><strong>Larangan:</strong> Dilarang membawa barang yang tidak relevan selama perkuliahan, seperti makanan atau minuman.</li>
-                </ul>
-
-                <h2>Konsekuensi Pelanggaran</h2>
-                <p>Apabila terdapat pelanggaran terhadap tata tertib yang telah ditentukan, maka akan dikenakan sanksi sesuai dengan kebijakan yang berlaku. Beberapa sanksi yang mungkin diberikan antara lain:</p>
-                <ul class="consequences-list">
-                    <li>Perhatian atau Teguran Lisan</li>
-                    <li>Skorsing untuk Beberapa Pertemuan</li>
-                    <li>Penurunan Nilai Kehadiran</li>
-                    <li>Pemanggilan Orang Tua atau Wali</li>
-                </ul>
-
-                <h2>Dokumen Pendukung</h2>
-                <p>Untuk informasi lebih lanjut tentang tata tertib, Anda dapat mengunduh dokumen resmi melalui tautan berikut:</p>
-                <a href="panduan_tata_tertib.pdf" class="download-link" target="_blank">Unduh Panduan Tata Tertib (PDF)</a>
+                <!-- Dynamic Table -->
+                <table border="1" class="rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Deskripsi</th>
+                            <th>Kategori</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)): ?>
+                            <tr>
+                                <td><?= $row['id_rules'] ?></td>
+                                <td><?= htmlspecialchars($row['description']) ?></td>
+                                <td><?= htmlspecialchars($row['category']) ?></td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
             </section>
         </main>
     </div>
