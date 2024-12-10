@@ -71,7 +71,7 @@ body {
 }
 
 .sidebar .copyright {
-  margin-top: 190px;
+  margin-top: 240px;
   /* align-items: flex-end; */
   text-align: center;
   padding: 30px;
@@ -225,7 +225,6 @@ header h2 {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-
 }
 
 .profile-photo {
