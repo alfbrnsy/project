@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Pelanggaran</title>
+    <link rel="stylesheet" href="../../assets/css/laporpeldosen.css">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div>
+            <div class="logo">
+                <img src="../../assets/images/logo.png" alt="Logo JTI">
+                <h2>Tata Tertib JTI</h2>
+            </div>
+            <ul class="menu">
+                <li><span class="material-icons">home</span> Halaman Awal</li>
+                <li><a href="tatibdosen.html"></a><span class="material-icons">list</span> Daftar Tata Tertib</li>
+                <li class="active"><span class="material-icons">report</span> Pelanggaran Tata Tertib</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <h6>2024 - Jurusan Teknologi Informasi<br>Politeknik Negeri Malang</h6>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Laporan Pelanggaran Tata Tertib Mahasiswa</h1>
+        <form action="uploadpelanggaran.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="kelas">Kelas Mahasiswa</label>
+                <select id="kelas" name="kelas" required>
+                    <option value="" disabled selected>Pilih Kelas</option>
+                    <option value="TI-1A">TI-1A</option>
+                    <option value="TI-1B">TI-1B</option>
+                    <option value="TI-1C">TI-1C</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nama">Nama Lengkap Mahasiswa</label>
+                <input type="text" id="nama" name="nama" placeholder="Isi Nama Lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Pelanggaran</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="matkul">Untuk Mata Kuliah/Dosen Pembimbing</label>
+                <input type="text" id="matkul" name="matkul" placeholder="Pilih Mata Kuliah/Dosen Pembimbing" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tingkat">Tingkat Pelanggaran</label>
+                <select id="tingkat" name="tingkat" required>
+                    <option value="" disabled selected>Pilih Tingkat Pelanggaran</option>
+                    <option value="Ringan">Ringan</option>
+                    <option value="Sedang">Sedang</option>
+                    <option value="Berat">Berat</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pelanggaran">Nama Pelanggaran</label>
+                <input type="text" id="pelanggaran" name="pelanggaran" placeholder="Pilih Nama Pelanggaran" required>
+            </div>
+
+            <div class="form-group">
+                <label for="keterangan">Keterangan Pelanggaran</label>
+                <textarea id="keterangan" name="keterangan" rows="4" placeholder="Deskripsi Pelanggaran" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="bukti">Bukti Pelanggaran</label>
+                <input type="file" id="bukti" name="bukti" accept=".jpg,.jpeg,.png,.pdf" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Unggah Pelanggaran</button>
+        </form>
+    </div>
+</body>
+
+</html>
