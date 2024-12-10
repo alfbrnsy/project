@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelanggaran Tata Tertib</title>
-    <link rel="stylesheet" href="../assets/css/ptatatertib.css">
+    <link rel="stylesheet" href="../../assets/css/ptatatertib.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <img src="../assets/images/logo.png" alt="Logo JTI" class="logo">
+            <img src="../../assets/images/logo.png" alt="Logo JTI" class="logo">
             <ul class="menu">
                 <li class="active"><span class="material-icons">home</span> Halaman Awal</li>
                 <li><span class="material-icons">list</span> Pelanggaran Tata Tertib</li>
-                <li><span class="material-icons">description</span> Pengajuan Surat Izin</li>
-                <li><span class="material-icons">assignment</span> Pengajuan Kompensasi</li>
                 <li><span class="material-icons">notifications</span> Notifikasi</li>
-                <li><span class="material-icons">history</span> Histori Pelanggaran</li>
                 <li><span class="material-icons">contact_support</span> Kontak</li>
                 <li><span class="material-icons">help</span> Panduan Tata Tertib</li>
             </ul>
@@ -33,7 +30,7 @@
                 <h1>Pelanggaran Tata Tertib</h1>
                 <div class="user-info">
                     <span>Satria Rakhmadani</span>
-                    <img src="profile.png" alt="Profile Picture" class="profile-pic">
+                    <img src="../../assets/images/profile.png" alt="Profile Picture" class="profile-pic">
                 </div>
             </header>
             <section class="tata-tertib">

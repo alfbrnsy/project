@@ -12,19 +12,69 @@ body {
 
 /* Sidebar Styling */
 .sidebar {
-    width: 15%;
-    background-color: #004085;
-    color: #fff;
+    width: 250px;
+    background-color: #00264d;
+    color: white;
     padding: 20px;
-    display: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh; /* Pastikan sidebar memanjang sepanjang layar */
+    height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    transition: transform 0.3s ease; /* Animasi transisi */
-}
+    justify-content: space-between;
+  
+  }
+  
+  .sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .logo img {
+    margin-top: 24px;
+    width: 70%;
+    height: auto;
+  }
+  
+  .sidebar .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .menu li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar .menu li:hover {
+    background-color: #005180;
+  }
+  
+  .sidebar .menu li .material-icons {
+    margin-right: 10px;
+  }
+  
+  .menu li.active {
+    background-color: #007bff;
+    /* Change background for the active menu */
+    color: #fff;
+    /* Change text color for better contrast */
+    border-radius: 5px;
+    /* Optional: rounded corners */
+  }
+  
+  .menu li.active span {
+    color: #fff;
+    /* Ensure the icon color matches */
+  }
+  
+  .sidebar .copyright {
+    margin-top: 190px;
+    /* align-items: flex-end; */
+    text-align: center;
+    padding: 30px;
+  }
+  
 .logo {
     width: 130px;
     margin-bottom: 20px;
