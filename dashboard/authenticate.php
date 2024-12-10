@@ -32,7 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header("Location: dosen/dashboarddosen.html");
             } elseif ($user['role'] === 'mahasiswa') {
                 header("Location: mahasiswa/dashboard.html");
-            } else {
+            } elseif ($user['role'] === 'kps') {
+                header("Location: kps/dashboardkps.html");
+            exit();
+        } else {
             // Password does not match
             header("Location: ../logintt.html?error=Invalid%20username%20or%20password");
             exit();
