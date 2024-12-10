@@ -1,7 +1,7 @@
 <?php
 
 // Konfigurasi koneksi database
-$serverName = "LAPTOP-CQ7PSFUN"; // Nama server
+$serverName = "HUSEIN"; // Nama server
 $connectionInfo = array("Database" => "si_tata_tertib"); // Nama database
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
