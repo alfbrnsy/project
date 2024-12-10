@@ -15,7 +15,7 @@
     <div class="login-container">
         <img src="assets/images/logo.png" alt="Logo JTI" class="logo">
         <h2>Login Akun</h2>
-        <form action="/dashboard/authenticate.php" method="post">
+        <form action="dashboard/authenticate.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username" required>
@@ -24,10 +24,21 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
-            
-            <a href="dashboard/mahasiswa/dashboard.html">
-                <button type="submit" class="btn">Login</button>
-            </a>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="mahasiswa">Mahasiswa</option>
+                    <option value="dosen">Dosen</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        
+            <!--  errors handling  -->
+            <?php if (isset($_GET['error'])): ?>
+                <p class="error-message" style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
+            <?php endif; ?>
         </form>
     </div>
 </body>

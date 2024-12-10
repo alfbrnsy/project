@@ -1,70 +1,51 @@
 <?php
-// Start session
 session_start();
+require_once '../config/database.php';
 
-// Include the database connection file
-include_once '../config/database.php'; // Update the path if necessary
-
-// Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve form data
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-    $role = trim($_POST['role']);
 
     // Validate input
-    if (empty($username) || empty($password) || empty($role)) {
-        header('Location: /pages/login.php?error=Empty fields');
+    if (empty($username) || empty($password)) {
+        header("Location: ../logintt.html?error=Harap%20isi%20semua%20field");
         exit();
     }
 
-    // Query to verify the user and their role
-    $sql = "SELECT * FROM Users WHERE username = ? AND role = ?";
-    $params = array($username, $role);
+    // Query to find the user
+    $sql = "SELECT * FROM tb_users WHERE username = ?";
+    $params = array($username);
+    $stmt = sqlsrv_query($conn, $sql, $params);
 
-    // Prepare the SQL statement
-    $stmt = sqlsrv_prepare($conn, $sql, $params);
+    if ($stmt && sqlsrv_has_rows($stmt)) {
+        $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 
-    if ($stmt) {
-        // Execute the statement
-        if (sqlsrv_execute($stmt)) {
-            // Fetch the result
-            $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+        // Verify the password (plain text comparison)
+        if ($user['password'] === $password) {
+            // Start user session
+            $_SESSION['id_user'] = $user['id_user'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role'];
 
-            // Check if user exists and password matches
-            if ($user && password_verify($password, $user['password'])) {
-                // Valid credentials, set session variables
-                $_SESSION['user_id'] = $user['id_user'];
-                $_SESSION['username'] = $user['username'];
-                $_SESSION['role'] = $user['role'];
-
-                // Redirect based on role
-                if ($user['role'] === 'mahasiswa') {
-                    header('Location: /mahasiswa/dashboard.php');
-                } elseif ($user['role'] === 'dosen') {
-                    header('Location: /dosen/dashboard.php');
-                }
-                exit();
-            } else {
-                // Invalid credentials
-                header('Location: /pages/login.php?error=Invalid credentials');
-                exit();
+            // Redirect based on role
+            if ($user['role'] === 'dosen') {
+                header("Location: dosen/dashboarddosen.html");
+            } elseif ($user['role'] === 'mahasiswa') {
+                header("Location: mahasiswa/dashboard.html");
             }
+            exit();
         } else {
-            // Log execution errors
-            error_log("Execution error: " . print_r(sqlsrv_errors(), true));
-            header('Location: /pages/login.php?error=Database error');
+            // Password does not match
+            header("Location: ../logintt.html?error=Invalid%20username%20or%20password");
             exit();
         }
     } else {
-        // Log preparation errors
-        error_log("Preparation error: " . print_r(sqlsrv_errors(), true));
-        header('Location: /pages/login.php?error=Database preparation error');
+        // User not found
+        header("Location: ../logintt.html?error=Invalid%20username%20or%20password");
         exit();
     }
 } else {
-    // Redirect to login if accessed without a POST request
-    header('Location: /pages/login.php');
+    header("Location: ../logintt.html");
     exit();
 }
 ?>
