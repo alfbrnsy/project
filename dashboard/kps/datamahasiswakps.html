@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Tata Tertib</title>
-    <link rel="stylesheet" href="../../assets/css/datadosenkps.css">
+    <link rel="stylesheet" href="../../assets/css/datamahasiswakps.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -19,10 +19,11 @@
                     <h2>Tata Tertib JTI</h2>
                 </div>
                 <ul class="menu">
-                    <li><a href="dashboardkps.html"></a><span class="material-icons">home</span> Halaman Awal</li>
-                    <li><a href="datadosenkps.html"></a><span class="material-icons">group</span> Data Dosen</li>
-                    <li class="active"><span class="material-icons">school</span> Data Mahasiswa</li>
-                    <li><a href="datapelanggarankps.html"></a><span class="material-icons">warning</span> Data Pelanggaran</li>
+                    <li><span class="material-icons">school</span> Halaman Awal</li>
+                    <li><span class="material-icons">home</span> Data Dosen</li>
+                    <li class="active"><span class="material-icons">home</span> Data Mahasiswa</li>
+                    <li><span class="material-icons">warning</span> Data Pelanggaran</li>
+                    <li><span class="material-icons">help</span> Panduan Tata Tertib</li>
                 </ul>
             </div>
             <div class="copyright">
@@ -32,28 +33,62 @@
 
         <!-- Main Content -->
         <div class="main-content">
-            <header>
-                <div class="top-header">
-                    <h1>Selamat Datang, Admin...</h1>
-                    <div class="profile-area">
-                        <img src="../../assets/images/profile.png" alt="Foto Profil" class="profile-photo">
-                        <span class="profile-name">Satria Rakhmad</span>
-                        <div class="logout-menu">
-                            <button id="logout-btn">Logout</button>
-                        </div>
-                    </div>
+                <div class="data-mahasiswa">
+                  <h2>Data Mahasiswa</h2>
+                  <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Cari kelas..." onchange="filterTable()">
+                  </div>
+                  <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Nama Mahasiswa</th>
+                          <th>Kelas</th>
+                          <th>NIM</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableBody">
+                      <tbody>
+                        <tr>
+                          <td>Satria Rahmadani</td>
+                          <td>SIB 2A</td>
+                          <td>234567890</td>
+                        </tr>
+                        <tr>
+                          <td>Satria Rahmadani</td>
+                          <td>SIB 2A</td>
+                          <td>234567890</td>
+                        </tr>
+                        <tr>
+                          <td>Satria Rahmadani</td>
+                          <td>SIB 2A</td>
+                          <td>234567890</td>
+                        </tr>
+                        <tr>
+                          <td>Satria Rahmadani</td>
+                          <td>SIB 2A</td>
+                          <td>234567890</td>
+                        </tr>
+                        <tr>
+                          <td>Satria Rahmadani</td>
+                          <td>SIB 2A</td>
+                          <td>234567890</td>
+                        </tr>
+                        <tr>
+                          <td>Satria Rahmadani</td>
+                          <td>SIB 2A</td>
+                          <td>234567890</td>
+                        </tr>
+                        <tr>
+                          <td>Satria Rahmadani</td>
+                          <td>SIB 2A</td>
+                          <td>234567890</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-                <h2>Moch Zawaruddin Abdullah, S.ST., M.Kom.</h2>
-                <p>KPS Program Studi: D-IV Sistem Informasi Bisnis</p>
-            </header>
-            <div class="welcome-box">
-                <img src="../../assets/images/book.png" alt="Illustration">
-                <p>
-                    Dashboard ini dirancang untuk mendukung Anda dalam mengelola administrasi jurusan secara efisien. Dengan fitur yang tersedia, Anda dapat memantau tata tertib mahasiswa, mencatat pelanggaran, mengelola pengajuan kompensasi, dan mengirimkan notifikasi atau pengumuman penting. <br><br>
-                    Kami berharap sistem ini dapat membantu menciptakan lingkungan akademik yang lebih tertib dan terorganisir. Selamat bekerja, dan semoga tugas Anda menjadi lebih mudah!
-                </p>
-            </div>
-        </div>
+              </div>
     </div>
 </body>
 
