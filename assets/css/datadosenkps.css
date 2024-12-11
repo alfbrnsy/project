@@ -21,7 +21,6 @@ body {
   height: 100vh;
   position: fixed;
   justify-content: space-between;
-
 }
 
 .sidebar .logo {
@@ -58,25 +57,20 @@ body {
 
 .menu li.active {
   background-color: #007bff;
-  /* Change background for the active menu */
   color: #fff;
-  /* Change text color for better contrast */
   border-radius: 5px;
-  /* Optional: rounded corners */
 }
 
 .menu li.active span {
   color: #fff;
-  /* Ensure the icon color matches */
 }
 
 .sidebar .copyright {
-  margin-top: 240px;
+  margin-top: 190px;
   /* align-items: flex-end; */
   text-align: center;
   padding: 30px;
 }
-
 
 /* Main Content */
 .main-content {
@@ -86,10 +80,51 @@ body {
   background-color: #f4f4f4;
 }
 
+.data-dosen {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.data-dosen h2 {
+  background-color: #407BFF;
+  margin-bottom: 20px;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+table th, table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table tr:hover {
+  background-color: #f5f5f5;
+}
+
 header {
   text-align: left;
   margin-bottom: 20px;
-  align-items: left;
 }
 
 header h1 {
@@ -102,28 +137,6 @@ header h2 {
   margin: 10px 0;
   font-weight: bold;
   color: #000;
-  background-color: #f4f4f4;
-}
-
-.user-details {
-  display: flex;
-  justify-content: left;
-  gap: 36px;
-  margin-bottom: 16px;
-}
-
-.user-details .detail {
-  background: #f9f9f9;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.user-details p {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
 }
 
 .welcome-box {
@@ -148,9 +161,9 @@ header h2 {
   color: #555;
   line-height: 1.5;
   text-align: left;
-
 }
 
+/* Stats Section */
 .stats {
   background: white;
   padding: 20px;
@@ -169,116 +182,30 @@ header h2 {
 
 .stats .cards {
   display: flex;
-  /* Arrange cards in a row */
   gap: 20px;
-  /* Add spacing between cards */
 }
 
 .stats .card {
-  flex: 5;
-  /* Make all cards equal in size */
+  flex: 1;
   padding: 20px;
   border-radius: 8px;
   color: black;
-  /* Adjust text color for contrast */
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Add some depth */
 }
 
-/* Different background colors for each card */
 .stats .card.izin {
   background-color: #9DB7FF;
-  /* Blue */
 }
 
 .stats .card.sakit {
   background-color: #E39DFF;
-  /* Red */
 }
 
 .stats .card.alpha {
   background-color: #FBC5C1;
-  /* Yellow */
 }
 
 .stats .card.kompensasi {
   background-color: #FFD19D;
-  /* Green */
-}
-
-
-/* Profile Area */
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  /* Posisikan di kanan atas */
-  /* align-items: ; */
-  padding: 10px 20px;
-  background-color: #f4f4f4;
-  /* Warna header */
-  /* border-bottom: 1px solid #ddd; */
-}
-
-.profile-area {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.profile-photo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  /* Buat foto menjadi lingkaran */
-  border: 2px solid #005180;
-  /* Tambahkan border */
-}
-
-.profile-name {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Logout Menu */
-.logout-menu {
-  display: none;
-  /* Sembunyikan secara default */
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  z-index: 1000;
-}
-
-.logout-menu button {
-  background-color: #00264d;
-  /* Warna tombol */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: bold;
-  width: 100%;
-  /* Sesuaikan dengan menu dropdown */
-  text-align: left;
-}
-
-.logout-menu button:hover {
-  background-color: #005180;
-  /* Warna saat hover */
-}
-
-/* Hover Effect */
-.profile-area:hover .logout-menu {
-  display: block;
-  /* Tampilkan menu logout saat hover */
 }
