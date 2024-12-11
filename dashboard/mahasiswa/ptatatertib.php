@@ -51,10 +51,6 @@ if ($stmt === false) {
         <main class="content">
             <header class="header">
                 <h1>Pelanggaran Tata Tertib</h1>
-                <div class="user-info">
-                    <span>Satria Rakhmadani</span>
-                    <img src="../../assets/images/profile.png" alt="Profile Picture" class="profile-pic">
-                </div>
             </header>
             <section class="tata-tertib">
                 <h2>Daftar Pelanggaran</h2>
