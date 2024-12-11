@@ -171,6 +171,8 @@ header h2 {
   /* Arrange cards in a row */
   gap: 20px;
   /* Add spacing between cards */
+  max-width: 300px;
+  height: auto;
 }
 
 .stats .card {
