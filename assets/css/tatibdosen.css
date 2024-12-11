@@ -16,7 +16,7 @@ body {
 .tatib-list {
   margin: 40px auto;
   max-width: 1200px;
-  padding: 20px;
+  padding-left: 300px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -62,13 +62,13 @@ body {
   background-color: #00264d;
   color: white;
   padding: 20px;
-  height: 100vh; /* Sidebar akan mencakup seluruh tinggi layar */
+  height: 100vh; /* Sidebar mencakup seluruh tinggi layar */
   position: fixed; /* Sidebar tetap di tempat */
-  top: 0; /* Memastikan posisi mulai dari atas */
-  left: 0; /* Memastikan posisi mulai dari kiri */
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Membagi ruang antara logo/menu dan copyright */
+  justify-content: space-between; /* Membagi ruang antara menu dan copyright */
 }
 
 .sidebar .logo {
@@ -105,13 +105,16 @@ body {
   background-color: #005180;
 }
 
+.sidebar .menu li.active {
+  background-color: #005180;
+}
+
 .sidebar .menu li .material-icons {
   margin-right: 10px;
 }
 
 .sidebar .copyright {
-  margin-top: 300px;
-  /* align-items: flex-end; */
   text-align: center;
-  padding: 30px;
+  font-size: 0.85rem;
+  padding: 20px;
 }

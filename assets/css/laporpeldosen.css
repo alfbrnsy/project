@@ -13,68 +13,69 @@ body {
     width: 100%;
   }
 
-.sidebar {
+  .sidebar {
     width: 250px;
     background-color: #00264d;
     color: white;
-    height: 100vh;
-    position: fixed;
+    padding: 20px;
+    height: 100vh; /* Sidebar mencakup seluruh tinggi layar */
+    position: fixed; /* Sidebar tetap di tempat */
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.sidebar .logo {
+    justify-content: space-between; /* Membagi ruang antara menu dan copyright */
+  }
+  
+  .sidebar .logo {
     text-align: center;
     margin-bottom: 20px;
   }
-
-.sidebar .logo img {
+  
+  .sidebar .logo img {
+    margin-top: 24px;
     width: 70%;
-    margin: 0 auto 10px;
-    display: block;
-}
-
-.sidebar .menu {
+    height: auto;
+  }
+  
+  .sidebar .menu {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-.sidebar .menu li {
+  }
+  
+  .sidebar .menu li {
     padding: 15px;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s;
     color: white;
-}
+  }
 
-.sidebar .menu li a{
+  .sidebar .menu li a{
     color: white !important; /* Pastikan teks link di sidebar putih */
     text-decoration: none; /* Hilangkan garis bawah */
 }
-
-.sidebar .menu li:hover,
-.sidebar .menu li.active {
+  
+  .sidebar .menu li:hover {
     background-color: #005180;
-}
-
-.menu li.active {
-    background-color: #007bff;
-    /* Change background for the active menu */
-    color: #fff;
-    /* Change text color for better contrast */
-    border-radius: 5px;
-    /* Optional: rounded corners */
+  }
+  
+  .sidebar .menu li.active {
+    background-color: #005180;
+  }
+  
+  .sidebar .menu li .material-icons {
+    margin-right: 10px;
+  }
+  
+  .sidebar .copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 20px;
   }
 
-.sidebar .menu li .material-icons {
-    margin-right: 10px;
-}
-
-.content {
+  .content {
     margin-left: 270px;
     padding: 20px;
 }
@@ -83,6 +84,7 @@ body {
     font-size: 1.8rem;
     color: #333;
     margin-bottom: 20px;
+    padding-left: 12px;
 }
 
 form {

@@ -18,10 +18,13 @@ body {
   background-color: #00264d;
   color: white;
   padding: 20px;
-  height: 100vh;
-  position: fixed;
-  justify-content: space-between;
-
+  height: 100vh; /* Sidebar mencakup seluruh tinggi layar */
+  position: fixed; /* Sidebar tetap di tempat */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Membagi ruang antara menu dan copyright */
 }
 
 .sidebar .logo {
@@ -50,20 +53,27 @@ body {
 }
 
 .sidebar .menu li a{
-    color: white !important; /* Pastikan teks link di sidebar putih */
-    text-decoration: none; /* Hilangkan garis bawah */
+  color: white !important; /* Pastikan teks link di sidebar putih */
+  text-decoration: none; /* Hilangkan garis bawah */
 }
 
 .sidebar .menu li:hover {
   background-color: #005180;
-  color: white !important; /* Pastikan teks link di sidebar putih */
-    text-decoration: none; /* Hilangkan garis bawah */
+}
+
+.sidebar .menu li.active {
+  background-color: #005180;
 }
 
 .sidebar .menu li .material-icons {
   margin-right: 10px;
 }
 
+.sidebar .copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 20px;
+}
 .menu li.active {
   background-color: #007bff;
   /* Change background for the active menu */
@@ -78,12 +88,11 @@ body {
   /* Ensure the icon color matches */
 }
 
-.sidebar .copyright {
-  margin-top: 190px;
-  /* align-items: flex-end; */
-  text-align: center;
-  padding: 30px;
-}
+  .sidebar .copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 20px;
+  }
 
 .sidebar .menu li:hover a {
   color: #cfcfcf; /* Ubah menjadi abu-abu terang saat hover */
