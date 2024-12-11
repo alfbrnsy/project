@@ -21,74 +21,89 @@ body {
     height: 100vh;
     position: fixed;
     justify-content: space-between;
-  
-  }
-  
-  .sidebar .logo {
+
+}
+
+.sidebar .logo {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .sidebar .logo img {
+}
+
+.sidebar .logo img {
     margin-top: 24px;
     width: 70%;
     height: auto;
-  }
-  
-  .sidebar .menu {
+}
+
+.sidebar .menu {
     list-style: none;
     padding: 0;
-  }
-  
-  .sidebar .menu li {
+}
+
+.sidebar .menu li {
     padding: 15px;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .sidebar .menu li:hover {
+    color: white;
+}
+
+.sidebar .menu li a {
+    color: white !important;
+    /* Pastikan teks link di sidebar putih */
+    text-decoration: none;
+    /* Hilangkan garis bawah */
+}
+
+.sidebar .menu li:hover {
     background-color: #005180;
-  }
-  
-  .sidebar .menu li .material-icons {
+}
+
+.sidebar .menu li .material-icons {
     margin-right: 10px;
-  }
-  
-  .menu li.active {
+}
+
+.menu li.active {
     background-color: #007bff;
     /* Change background for the active menu */
     color: #fff;
     /* Change text color for better contrast */
     border-radius: 5px;
     /* Optional: rounded corners */
-  }
-  
-  .menu li.active span {
+}
+
+.menu li.active span {
     color: #fff;
     /* Ensure the icon color matches */
-  }
-  
-  .sidebar .copyright {
-    margin-top: 190px;
+}
+
+.sidebar .copyright {
+    margin-top: 140px;
     /* align-items: flex-end; */
     text-align: center;
     padding: 30px;
-  }
-  
+}
+
+.sidebar .menu li:hover a {
+    color: #cfcfcf;
+    /* Ubah menjadi abu-abu terang saat hover */
+}
+
+.sidebar .menu li.active a {
+    color: white;
+    /* Pastikan link aktif tetap putih */
+    font-weight: bold;
+    /* Buat lebih tebal untuk penekanan */
+}
+
 .logo {
-    width: 130px;
     margin-bottom: 20px;
 }
 
 .menu {
     list-style: none;
     padding: 0;
-}
-
-.menu li {
-    margin: 15px 0;
 }
 
 .menu a {
@@ -105,15 +120,18 @@ body {
 footer {
     font-size: 12px;
     text-align: center;
-    margin-top: auto; /* Menempatkan footer di bawah */
-    padding-top: 300px; /* Menambahkan sedikit jarak dari menu */
+    margin-top: auto;
+    /* Menempatkan footer di bawah */
+    padding-top: 300px;
+    /* Menambahkan sedikit jarak dari menu */
 }
 
 /* Main Content */
 .content {
     flex-grow: 1;
     padding: 40px;
-    margin-left: 16%; /* Memberikan jarak di sebelah kiri konten */
+    margin-left: 280px;
+    /* Memberikan jarak di sebelah kiri konten */
 }
 
 
@@ -146,7 +164,8 @@ footer {
     margin-top: 20px;
 }
 
-.tabel-pelanggaran th, .tabel-pelanggaran td {
+.tabel-pelanggaran th,
+.tabel-pelanggaran td {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;

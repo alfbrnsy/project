@@ -46,10 +46,18 @@ body {
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  color: white;
+}
+
+.sidebar .menu li a{
+    color: white !important; /* Pastikan teks link di sidebar putih */
+    text-decoration: none; /* Hilangkan garis bawah */
 }
 
 .sidebar .menu li:hover {
   background-color: #005180;
+  color: white !important; /* Pastikan teks link di sidebar putih */
+    text-decoration: none; /* Hilangkan garis bawah */
 }
 
 .sidebar .menu li .material-icons {
@@ -71,11 +79,21 @@ body {
 }
 
 .sidebar .copyright {
-  margin-top: 300px;
+  margin-top: 190px;
   /* align-items: flex-end; */
   text-align: center;
   padding: 30px;
 }
+
+.sidebar .menu li:hover a {
+  color: #cfcfcf; /* Ubah menjadi abu-abu terang saat hover */
+}
+
+.sidebar .menu li.active a {
+  color: white; /* Pastikan link aktif tetap putih */
+  font-weight: bold; /* Buat lebih tebal untuk penekanan */
+}
+
 
 
 /* Main Content */

@@ -32,20 +32,23 @@ if ($stmt === false) {
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <img src="../../assets/images/logo.png" alt="Logo JTI" class="logo">
-            <h2>Tata Tertib JTI</h2>
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../../assets/images/logo.png" alt="Logo JTI" style="width:175px">
+                <h2>Tata Tertib JTI</h2>
+            </div>  
             <ul class="menu">
-                <li><a href="dashboard.html"></a><span class="material-icons">home</span> Halaman Awal</li>
-                <li class="active"><span class="material-icons">list</span> Pelanggaran Tata Tertib</li>
-                <li><a href="notifikasi.html"></a><span class="material-icons">notifications</span> Notifikasi</li>
-                <li><a href="kontak.html"></a><span class="material-icons">contact_support</span> Kontak</li>
-                <li><a href="pandutt.php"></a><span class="material-icons">help</span> Panduan Tata Tertib</li>
+                <li ><span class="material-icons">home</span><a href="dashboard.html"> Halaman Awal</a> </li>
+                <li class="active" ><span class="material-icons">list</span><a href="ptatatertib.php"> Pelanggaran Tata Tertib</a> </li>
+                <li><span class="material-icons">notifications</span><a href="notifikasi.html"> Notifikasi</a> </li>
+                <li><span class="material-icons">contact_support</span><a href="kontak.html"> Kontak</a> </li>
+                <li><span class="material-icons">help</span><a href="pandutt.php"> Panduan Tata Tertib</a> </li>
             </ul>
-            <footer>
-                <p>2024 - Jurusan Teknologi Informasi<br>Politeknik Negeri Malang</p>
-            </footer>
-        </aside>
+            <div class="copyright">
+                <h6>2024 Jurusan Teknologi Informasi <br>
+                Politeknik Negeri Malang</h6>
+            </div>
+        </div>
 
         <!-- Main Content -->
         <main class="content">

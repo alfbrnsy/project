@@ -43,6 +43,7 @@ body {
   
   .sidebar .menu li {
     padding: 15px;
+    margin: 0;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -128,7 +129,7 @@ footer {
 .content {
     flex-grow: 1;
     padding: 40px;
-    margin-left: 16%; /* Memberikan jarak di sebelah kiri konten */
+    margin-left: 260px; /* Memberikan jarak di sebelah kiri konten */
 }
 
 .header {

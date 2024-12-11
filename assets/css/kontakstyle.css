@@ -109,8 +109,9 @@ body {
 /* Main Content */
 .content {
     flex-grow: 1;
-    padding: 40px;
-    margin-left: 16%; /* Memberikan jarak di sebelah kiri konten */
+    
+    padding-left: 300px;
+  
 }
 
 .header {
@@ -138,7 +139,7 @@ body {
 }
 
 h2 {
-    color: #004085;
+    
 }
 
 .contact-list {

@@ -28,11 +28,11 @@ if ($stmt === false) {
                 <h2>Tata Tertib JTI</h2>
             </div>
             <ul class="menu">
-                <li class="active"><span class="material-icons">home</span> Halaman Awal</li>
-                <li><a href="ptatatertib.php"> <span class="material-icons">list</span> Pelanggaran Tata Tertib</a> </li>
-                <li><a href="notifikasi.html"> <span class="material-icons">notifications</span> Notifikasi </a> </li>
-                <li><a href="kontak.html"> <span class="material-icons">contact_support</span> Kontak</a> </li>
-                <li><a href="pandutt.php"> <span class="material-icons">help</span> Panduan Tata Tertib</a> </li>
+                <li><span class="material-icons">home</span><a href="dashboard.html"> Halaman Awal</a> </li>
+                <li><span class="material-icons">list</span><a href="ptatatertib.php"> Pelanggaran Tata Tertib</a> </li>
+                <li><span class="material-icons">notifications</span><a href="notifikasi.html"> Notifikasi</a> </li>
+                <li><span class="material-icons">contact_support</span><a href="kontak.html"> Kontak</a> </li>
+                <li class="active" ><span class="material-icons">help</span><a href="pandutt.php"> Panduan Tata Tertib</a> </li>
             </ul>
             <div class="copyright">
                 <h6>2024 Jurusan Teknologi Informasi <br>
@@ -45,8 +45,7 @@ if ($stmt === false) {
             <header class="header">
                 <h1>Panduan Tata Tertib</h1>
                 <div class="user-info">
-                    <span>Satria Rakhmadani</span>
-                    <img src="../../assets/images/profile.png" alt="Profile Picture" class="profile-pic">
+                   
                 </div>
             </header>
 
