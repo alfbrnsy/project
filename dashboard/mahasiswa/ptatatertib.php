@@ -34,12 +34,13 @@ if ($stmt === false) {
         <!-- Sidebar -->
         <aside class="sidebar">
             <img src="../../assets/images/logo.png" alt="Logo JTI" class="logo">
+            <h2>Tata Tertib JTI</h2>
             <ul class="menu">
-                <li class="active"><span class="material-icons">home</span> Halaman Awal</li>
-                <li><span class="material-icons">list</span> Pelanggaran Tata Tertib</li>
-                <li><span class="material-icons">notifications</span> Notifikasi</li>
-                <li><span class="material-icons">contact_support</span> Kontak</li>
-                <li><span class="material-icons">help</span> Panduan Tata Tertib</li>
+                <li><a href="dashboard.html"></a><span class="material-icons">home</span> Halaman Awal</li>
+                <li class="active"><span class="material-icons">list</span> Pelanggaran Tata Tertib</li>
+                <li><a href="notifikasi.html"></a><span class="material-icons">notifications</span> Notifikasi</li>
+                <li><a href="kontak.html"></a><span class="material-icons">contact_support</span> Kontak</li>
+                <li><a href="pandutt.php"></a><span class="material-icons">help</span> Panduan Tata Tertib</li>
             </ul>
             <footer>
                 <p>2024 - Jurusan Teknologi Informasi<br>Politeknik Negeri Malang</p>
@@ -50,10 +51,6 @@ if ($stmt === false) {
         <main class="content">
             <header class="header">
                 <h1>Pelanggaran Tata Tertib</h1>
-                <div class="user-info">
-                    <span>Satria Rakhmadani</span>
-                    <img src="../../assets/images/profile.png" alt="Profile Picture" class="profile-pic">
-                </div>
             </header>
             <section class="tata-tertib">
                 <h2>Daftar Pelanggaran</h2>

@@ -271,7 +271,7 @@ footer {
 /* Footer Columns */
 .column, .footer-links, .footer-contact {
     flex: 1; /* Membagi ruang secara merata */
-    margin: 10px;
+    margin: 20px;
 }
 
 /* Logo dan Deskripsi */
