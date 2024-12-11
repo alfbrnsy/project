@@ -9,6 +9,11 @@ body {
     padding-left: 250px; /* Memberikan ruang untuk sidebar */
     box-sizing: border-box;
   }
+
+  .dashboard {
+    display: flex;
+    width: 100%;
+  }
   
   /* Sidebar */
   .sidebar {
@@ -47,7 +52,13 @@ body {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s;
+    color: white;
   }
+
+  .sidebar .menu li a{
+    color: white !important; /* Pastikan teks link di sidebar putih */
+    text-decoration: none; /* Hilangkan garis bawah */
+}
   
   .sidebar .menu li:hover {
     background-color: #005180;
