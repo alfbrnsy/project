@@ -23,15 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verify the password (plain text comparison)
         if ($user['password'] === $password) {
             // Store user details in the session
-            $_SESSION['id_user'] = $user['id_user'];
+            $_SESSION['id_user'] = $user['id_user']; // for general user
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
 
-            // Redirect based on role
+            // Check for lecturer role and store id_lecturer in session
             if ($user['role'] === 'dosen') {
+                $_SESSION['id_lecturer'] = $user['id_user']; // Store lecturer's ID
                 header("Location: dosen/dashboarddosen.html");
             } elseif ($user['role'] === 'mahasiswa') {
-                // Fetch id_student
+                // Fetch id_student if the user is a student
                 $sqlStudent = "SELECT id_student FROM tb_student WHERE id_student = ?";
                 $stmtStudent = sqlsrv_query($conn, $sqlStudent, array($user['id_user']));
 
