@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: "Plus Jakarta Sans";
     background-color: #f4f4f4;
-    padding-left: 250px; /* Memberikan ruang untuk sidebar */
+    padding-left: 300px; /* Memberikan ruang untuk sidebar */
     box-sizing: border-box;
   }
 
@@ -114,6 +114,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 30px;
   }
   
   table {
