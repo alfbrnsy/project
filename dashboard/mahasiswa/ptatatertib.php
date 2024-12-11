@@ -33,13 +33,13 @@ if ($stmt === false) {
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <img src="../../assets/images/logo.png" alt="Logo JTI" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo JTI" class="logo" >
             <ul class="menu">
-                <li class="active"><span class="material-icons">home</span> Halaman Awal</li>
-                <li><span class="material-icons">list</span> Pelanggaran Tata Tertib</li>
-                <li><span class="material-icons">notifications</span> Notifikasi</li>
-                <li><span class="material-icons">contact_support</span> Kontak</li>
-                <li><span class="material-icons">help</span> Panduan Tata Tertib</li>
+                <li ><span class="material-icons">home</span> Halaman Awal</li>
+                <li><a href="ptatatertib.php"> <span class="material-icons">list</span> Pelanggaran Tata Tertib</a> </li>
+                <li><a href="notifikasi.html"> <span class="material-icons">notifications</span> Notifikasi </a> </li>
+                <li><a href="kontak.html"> <span class="material-icons">contact_support</span> Kontak</a> </li>
+                <li><a href="pandutt.php"> <span class="material-icons">help</span> Panduan Tata Tertib</a> </li>
             </ul>
             <footer>
                 <p>2024 - Jurusan Teknologi Informasi<br>Politeknik Negeri Malang</p>
