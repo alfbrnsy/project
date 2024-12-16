@@ -28,6 +28,7 @@ if ($stmt === false) {
     <title>Pelanggaran Tata Tertib</title>
     <link rel="stylesheet" href="../../assets/css/ptatatertib.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 </head>
 <body>
     <div class="container">
