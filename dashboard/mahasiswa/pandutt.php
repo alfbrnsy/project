@@ -18,7 +18,7 @@ if ($stmt === false) {
     <title>Panduan Tata Tertib</title>
     <link rel="stylesheet" href="../../assets/css/panduttstyle.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png">
 </head>
 <body>
     <div class="container">
