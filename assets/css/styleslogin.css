@@ -19,6 +19,7 @@ body {
 /* Welcome Message */
 .welcome-message {
     text-align: center;
+    font-weight: 1000;
     margin-bottom: 30px;
     animation: slideInTop 1.5s ease-out; /* Animasi slide-in untuk judul */
 }
@@ -26,7 +27,7 @@ body {
 .welcome-text {
     color: #fff;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 1000;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     animation: textFadeIn 2s ease-out; /* Animasi tulisan fade-in */
 }
@@ -54,7 +55,7 @@ h2 {
     margin-bottom: 20px;
     color: #333;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /* Form Inputs */
@@ -304,4 +305,5 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 14px;
+    margin-top: 300vh;
 }
