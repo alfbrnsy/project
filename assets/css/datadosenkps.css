@@ -20,6 +20,8 @@ body {
   padding: 20px;
   height: 100vh;
   position: fixed;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -66,10 +68,12 @@ body {
 }
 
 .sidebar .copyright {
-  margin-top: 190px;
-  /* align-items: flex-end; */
   text-align: center;
-  padding: 30px;
+  font-size: 0.85rem;
+  color: #ddd;
+  margin-top: auto; /* Dorong copyright ke bawah */
+  padding-top: 10px; /* Tambahkan garis pemisah */
+  margin-bottom: 30px;
 }
 
 /* Main Content */
