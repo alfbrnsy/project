@@ -254,7 +254,7 @@ header h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  width: 100%; /* Lebar input sesuai tabel */
+  width: 95%; /* Lebar input sesuai tabel */
 }
 
 .search-container label {

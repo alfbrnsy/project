@@ -20,6 +20,8 @@ body {
   padding: 20px;
   height: 100vh;
   position: fixed;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
 }
@@ -30,8 +32,8 @@ body {
 }
 
 .sidebar .logo img {
-  margin-top: 20px;
-  width: 80%;
+  margin-top: 24px;
+  width: 70%;
   height: auto;
 }
 
@@ -58,25 +60,20 @@ body {
   margin-right: 10px;
 }
 
-.menu li.active {
+.sidebar .menu li.active {
   background-color: #007bff;
-  /* Change background for the active menu */
   color: #fff;
-  /* Change text color for better contrast */
   border-radius: 5px;
-  /* Optional: rounded corners */
-}
-
-.menu li.active span {
-  color: #fff;
-  /* Ensure the icon color matches */
+  font-weight: bold;
 }
 
 .sidebar .copyright {
-  margin-top: 240px;
-  /* align-items: flex-end; */
+  margin-top: auto;
   text-align: center;
-  padding: 30px;
+  padding-top: 10px;
+  color: #ddd;
+  margin-bottom: 30px;
+  font-size: 0.70rem;
 }
 
 
@@ -84,7 +81,7 @@ body {
 .main-content {
   margin-left: 300px;
   flex: 1;
-  padding: 20px;
+  padding: 20px 40px;
   background-color: #f4f4f4;
 }
 
@@ -151,63 +148,6 @@ header h2 {
   text-align: left;
 
 }
-
-.stats {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.stats h2 {
-  background-color: #407BFF;
-  margin-bottom: 20px;
-  padding: 1rem;
-  text-align: center;
-  color: #ffffff;
-  border-radius: 1rem;
-}
-
-.stats .cards {
-  display: flex;
-  /* Arrange cards in a row */
-  gap: 20px;
-  /* Add spacing between cards */
-}
-
-.stats .card {
-  flex: 5;
-  /* Make all cards equal in size */
-  padding: 20px;
-  border-radius: 8px;
-  color: black;
-  /* Adjust text color for contrast */
-  text-align: left;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Add some depth */
-}
-
-/* Different background colors for each card */
-.stats .card.izin {
-  background-color: #9DB7FF;
-  /* Blue */
-}
-
-.stats .card.sakit {
-  background-color: #E39DFF;
-  /* Red */
-}
-
-.stats .card.alpha {
-  background-color: #FBC5C1;
-  /* Yellow */
-}
-
-.stats .card.kompensasi {
-  background-color: #FFD19D;
-  /* Green */
-}
-
 
 /* Profile Area */
 .top-header {
