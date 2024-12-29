@@ -50,8 +50,8 @@ body {
 }
 
 .sidebar .menu li a{
-    color: white !important; /* Pastikan teks link di sidebar putih */
-    text-decoration: none; /* Hilangkan garis bawah */
+    color: white !important;
+    text-decoration: none;
 }
 
 .sidebar .menu li:hover {
@@ -64,32 +64,27 @@ body {
 
 .menu li.active {
   background-color: #007bff;
-  /* Change background for the active menu */
   color: #fff;
-  /* Change text color for better contrast */
   border-radius: 5px;
-  /* Optional: rounded corners */
 }
 
 .menu li.active span {
   color: #fff;
-  /* Ensure the icon color matches */
 }
 
 .sidebar .copyright {
   margin-top: 190px;
-  /* align-items: flex-end; */
   text-align: center;
   padding: 30px;
 }
 
 .sidebar .menu li:hover a {
-  color: #cfcfcf; /* Ubah menjadi abu-abu terang saat hover */
+  color: #cfcfcf;
 }
 
 .sidebar .menu li.active a {
-  color: white; /* Pastikan link aktif tetap putih */
-  font-weight: bold; /* Buat lebih tebal untuk penekanan */
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -184,42 +179,33 @@ header h2 {
 
 .stats .cards {
   display: flex;
-  /* Arrange cards in a row */
   gap: 20px;
-  /* Add spacing between cards */
 }
 
 .stats .card {
   flex: 5;
-  /* Make all cards equal in size */
   padding: 20px;
   border-radius: 8px;
   color: black;
-  /* Adjust text color for contrast */
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Add some depth */
 }
 
 /* Different background colors for each card */
 .stats .card.izin {
   background-color: #9DB7FF;
-  /* Blue */
 }
 
 .stats .card.sakit {
   background-color: #E39DFF;
-  /* Red */
 }
 
 .stats .card.alpha {
   background-color: #FBC5C1;
-  /* Yellow */
 }
 
 .stats .card.kompensasi {
   background-color: #FFD19D;
-  /* Green */
 }
 
 
