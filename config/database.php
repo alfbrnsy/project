@@ -1,7 +1,7 @@
 <?php
 
 class Database {
-    private $serverName = "LAPTOP-CQ7PSFUN";
+    private $serverName = "HUSEIN";
     private $connectionInfo = array("Database" => "si_tata_tertib");
     private $conn;
 
