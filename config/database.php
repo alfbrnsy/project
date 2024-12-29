@@ -1,19 +1,25 @@
 <?php
 
-// Konfigurasi koneksi database
-$serverName = "LAPTOP-CQ7PSFUN"; // Nama server
-$connectionInfo = array("Database" => "si_tata_tertib"); // Nama database
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+class Database {
+    private $serverName = "HUSEIN";
+    private $connectionInfo = array("Database" => "si_tata_tertib");
+    private $conn;
 
-// Cek koneksi
-if ($conn === false) {
-    // Log error ke file
-    logError(sqlsrv_errors());
+    public function connect() {
+        $this->conn = sqlsrv_connect($this->serverName, $this->connectionInfo);
+        if ($this->conn === false) {
+            $this->logError(sqlsrv_errors());
+            die("Terjadi kesalahan saat menghubungkan ke database. Silakan coba lagi.");
+        }
+        return $this->conn;
+    }
 
-    // Berikan pesan error kepada pengguna
-    die("Terjadi kesalahan saat menghubungkan ke database. Silakan coba lagi.");
+    public function close() {
+        sqlsrv_close($this->conn);
+    }
+
+    private function logError($errors) {
+        // Implement your error logging here
+    }
 }
-
-
 ?>
-
