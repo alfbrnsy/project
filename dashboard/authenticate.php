@@ -34,7 +34,7 @@ if ($stmt && sqlsrv_has_rows($stmt)) {
         // Check for lecturer role and store id_lecturer in session
         if ($user['role'] === 'dosen') {
             $_SESSION['id_lecturer'] = $user['id_user']; // Store lecturer's ID
-            header("Location: dosen/dashboarddosen.html");
+            header("Location: dosen/dashboarddosen.php");
         } elseif ($user['role'] === 'mahasiswa') {
             // Fetch id_student if the user is a student
             $sqlStudent = "SELECT id_student FROM tb_student WHERE id_student = ?";
