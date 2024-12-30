@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once '../../config/database.php'; // Include your database connection
+require_once '../../config/Database.php';
+require_once '../../config/User.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['id_student'])) {
@@ -10,10 +11,16 @@ if (!isset($_SESSION['id_student'])) {
 
 $id_student = $_SESSION['id_student']; // Get logged-in student's ID
 
+
+$db = new Database();
+$conn = $db->connect();
+
 // Fetch tb_report data for the current student
 $sql = "SELECT * FROM tb_report WHERE id_student = ? ORDER BY id_report DESC";
 $params = [$id_student];
 $stmt = sqlsrv_query($conn, $sql, $params);
+
+
 
 if ($stmt === false) {
     die(print_r(sqlsrv_errors(), true)); // Handle query errors

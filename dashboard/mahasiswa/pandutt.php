@@ -1,5 +1,9 @@
 <?php
-require_once '../../config/database.php'; // Include your database connection
+require_once '../../config/Database.php';
+
+// Create a Database object and get the connection
+$db = new Database();
+$conn = $db->connect();
 
 // Fetch all rules from the database
 $sql = "SELECT * FROM tb_rules ORDER BY id_rules";
